@@ -1,0 +1,511 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+   
+}
+
+/* --------------------------------- Header Styling ------------------------------------------------------ */
+
+/* layout */
+.header {
+    width: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    display:flex;
+    z-index: 9999; 
+    padding: 20px 20px;
+}
+
+.menu-search-container{
+    display: flex;
+    gap: 30px; 
+    align-items: center;
+}
+
+/* Sizing */
+.moneymanage-title, .info{
+    font-size: 20px;
+    font-weight: 700;    
+}
+
+nav{    
+    width: 100%;  
+}
+
+.nav-closed{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: none;
+}
+
+.nav-open{
+    /* background-color: blue; */
+    position: absolute;
+    top: 80%;
+    left:0;
+    opacity: 0;
+    
+}
+
+.nav-open ul{
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid rgb(149, 148, 148);
+  
+}
+
+.nav-open ul li{
+    padding: 8px 16px;
+    border-bottom: 1px solid rgb(199, 198, 198);
+}
+
+
+.menu-icon:hover{
+    opacity: 80%;
+    cursor: pointer;
+    
+}
+
+
+.nav-open ul li:last-child {
+    border-bottom: none
+  }
+
+  .gs-m{
+    background: linear-gradient(99deg, #83E5CB -5.46%, #44BF94 106.24%);
+    color: white;
+  }
+
+  .tt-m{
+    background: linear-gradient(144deg, #EF7878 10.8%, #F06A66 39.33%, #F25F57 71.52%);
+    color: white;
+  }
+  
+  .r-m{
+    background: linear-gradient(101deg, #08A5D9 -8.18%, #25B0DB 11.8%, #3EB9DC 34.13%, #50BFDE 56.45%, #5AC3DE 81.13%, #5EC5DF 109.33%);
+    color: white;
+  }
+
+.submenu-item{
+    background-color: white;
+}
+
+.gs-sm{
+    color: #44BF94;
+}
+
+.tt-sm{
+    color:#F16965;
+}
+
+.r-sm{
+    color: #1589BA;
+}
+
+/* --------------------------------- Home Content Styling ------------------------------------------------------ */
+
+/* Home Content Layout */
+.content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    height: 100vh;           
+    text-align: center;      
+}
+
+
+/* Slide Navigation Layout */
+.fp-slidesNav {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+}
+
+
+
+
+/* ---------Button Styling---------  */
+/*Getting Started Btn - shoelace notation */
+.started-btn::part(base){
+    background: var(--sl-color-neutral-10);
+    border: solid 1px #44BF94;
+}
+
+.started-btn::part(base):hover {
+background:#e1fcf3;
+}
+
+
+.started-btn::part(label) {
+color: #44BF94;
+}
+
+/*Times Are Tough Btn - shoelace notation */
+.tough-btn::part(base) {
+    background: var(--sl-color-neutral-10);
+    border: solid 1px #F16965;
+}
+
+.tough-btn::part(base):hover {
+background:#fdd4d3;
+}
+
+.tough-btn::part(label) {
+color: #F16965;
+}
+
+/*Time To Relax - shoelace notation */
+.relax-btn::part(base) {
+    background: var(--sl-color-neutral-10);
+    border: solid 1px #1589BA;
+}
+
+.relax-btn::part(base):hover {
+background:#c6eeff;
+}
+
+.relax-btn::part(label) {
+color: #1589BA;
+}
+/* ---------SVG Animation Styling---------  */
+/* -----Getting Started Animation-----  */
+.svg-container{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#arm-coin{
+    animation: arm-coin infinite 2s ease-in;
+    transform-box:stroke-box ;
+    transform-origin: right;
+}
+
+@keyframes arm-coin{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(-10deg) translateY(10px) ;
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+/* -----Tough Times Animation-----  */
+#head-body{
+    display:block;
+    animation: face-palm infinite 3s ease-in-out;
+    transform-origin:center;
+}
+
+@keyframes face-palm {  
+    0% {  
+        transform: rotate(0deg);  
+       }   
+    25%{
+        transform: rotate(10deg) translateX(10px) translateY(-25px);  
+    }
+    
+    50%{
+        transform: rotate(20deg) translateX(20px) translateY(-30px);  
+        animation-delay: 2s;
+    }
+
+    75% {  
+        transform: rotate(10deg) translateX(10px) translateY(-25px); 
+    }   
+    100%{
+        transform: rotate(0deg);
+    }
+  }
+
+/* -----Time To relax Animation-----  */
+#woman-arm{
+    animation: stroking-pig infinite 2s ease-in;
+    transform-box:stroke-box ;
+    transform-origin: right;
+}
+
+@keyframes stroking-pig {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(-5deg) translateX(-3px) translateY(-15px);
+    }
+    
+    100%{
+        transform: rotate(0deg);
+    }   
+}
+/* --------------------------------- Topic Content Styling ------------------------------------------------------ */
+
+/* -----Progress Bar Animation-----  */
+.progress-bar50{   
+    width:1px;
+    height: 10px;
+    position:fixed;
+    top: 0;
+}
+
+.isProgressing50{
+    animation: grow50 2s ease-out forwards;
+
+}
+
+@keyframes grow50{
+    0%{
+        width: 0%; 
+    }
+
+    100%{
+        width: 50vw;     
+    }
+}
+
+.progress-bar100{
+    width: 50vw;
+    height: 10px;
+    position:fixed;
+    top: 0;
+}
+
+.isProgressing100{
+    animation: grow100 2s ease-out forwards;
+   
+}
+
+@keyframes grow100 {
+    0%{
+        width:50vw;
+    }
+    100%{
+        width: 100vw;
+    }
+}
+/*-------------- Layout----------- */
+.topic-content-container{
+    position:relative;
+    z-index:1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:80vh;
+    padding: 10px;    
+}
+
+.topic-text{
+    width: 50%;
+    padding-right:20px;
+    color: grey;
+}
+
+.topic-content-container img{
+    width: 30%;
+
+}
+
+.planning-retirement img{
+    width: 20%;
+    height: auto;
+
+}
+
+.saving-text{
+    width: 30%;
+}
+
+
+.breadcrumb{
+    margin: 20px;
+    margin-top: 40px;
+}
+
+/*------------Slider Styling------------ */
+.back-gs::part(base):hover {
+background:#44BF94;
+}
+
+.back-tt::part(base):hover {
+background:#F16965;
+}
+
+.back-r::part(base):hover {
+background:#1589BA;
+}
+
+.slider{
+    position: relative;
+    width:100%;
+    height:60px;
+    bottom:10%;
+    z-index:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.next-topic-btn{
+    position: relative;
+    width:25%;
+    height: 60px;
+    background-color: white;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color:#44BF94; */
+    text-decoration: none;
+    padding-left: 50px;
+    transition: 1s;
+}
+
+.next-topic-btn:hover{
+    padding-left: 0px;
+    padding-right:50px;
+    color: white;
+}
+
+.next-topic-btn span{
+    position: absolute;
+    left:10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.5s ease-in;
+}
+
+.next-topic-btn:hover span{
+    left: calc(100% - 60px);
+}
+
+
+/* section-1 btn styling */
+.t1{
+    color:#44BF94; 
+}
+
+.t1:hover{
+    background: linear-gradient(99deg, #83E5CB -5.46%, #44BF94 106.24%);
+}
+
+.t1 span{
+    background-color:#44BF94;
+    color: white;
+}
+
+.t1:hover span{
+    color:#44BF94;
+    background-color: white;
+}
+
+/* section-2 btn styling */
+.t2{
+    color:#F16965; 
+}
+
+.t2:hover{
+    background: linear-gradient(144deg, #EF7878 10.8%, #F06A66 39.33%, #F25F57 71.52%);
+}
+
+.t2 span{
+    background-color:#F16965;
+    color: white;
+}
+
+.t2:hover span{
+    color:#F16965;
+    background-color: white;
+}
+
+/* section-3 btn styling */
+.t3{
+    color:#1589BA; 
+}
+
+.t3:hover{
+    background: linear-gradient(101deg, #08A5D9 -8.18%, #25B0DB 11.8%, #3EB9DC 34.13%, #50BFDE 56.45%, #5AC3DE 81.13%, #5EC5DF 109.33%);
+}
+
+.t3 span{
+    background-color:#1589BA;
+    color: white;
+}
+
+.t3:hover span{
+    color:#1589BA;
+    background-color: white;
+}
+
+
+/* --------------------------------- Image Gallery Styling ------------------------------------------------------ */
+
+.gallery{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.gallery a{
+    width: 20%;
+    margin: 0.3%;
+}
+
+
+.gallery a img{
+    width:100%;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+.gallery a:hover img{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+/* Desktop */  
+@media (min-width: 1024px) {  
+    /* ---styles for desktop--- */  
+
+  }  
+    
+
+  /* Mobile */  
+  @media (min-width: 480px) and (max-width: 768px) {  
+    /*----- styles for mobile----- */  
+    .content-container{
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+  }  
+    
+
